@@ -28,6 +28,13 @@
         font-family: 'Roboto', sans-serif;
         font-weight: 700;
         font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    h5 {
+        color: #000000;
+        font-family: 'Roboto', sans-serif;
+        
     }
 
 .container {
@@ -42,7 +49,9 @@
     color: #8b8b8b;
 }
 
-
+#plusicon{
+    display: flex;
+}
 
 #center__page {
     display: flex;
@@ -51,8 +60,8 @@
     justify-content: center;
 }
 
-img {
-    margin-bottom: 10px;
+#add__icon {
+    margin-right: 10px;
 }
 
 
