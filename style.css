@@ -23,11 +23,36 @@
         font-size: 1.2em;
     }
 
+    h4 {
+        color: #DFDDDD;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 1.2em;
+    }
+
 .container {
     max-width: 550px;
     max-height: 779px;
     min-height: 779px;
     margin-top: 50px;
+}
+
+
+#watchlist__btn:hover {
+    color: #8b8b8b;
+}
+
+
+
+#center__page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    margin-bottom: 10px;
 }
 
 
@@ -46,6 +71,7 @@ main {
     background-color: #ffffff;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    display: flex;
 }
 
 
@@ -57,7 +83,7 @@ form {
     display: flex;
     border-radius: 10px;
     position: relative;
-    top: -20px;
+    top: -590px;
 }
 
 form input {
