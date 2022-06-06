@@ -44,6 +44,9 @@
 }
 
 
+#watchlist__btn {
+    cursor: pointer;
+}
 
 #center__page {
     display: flex;
@@ -79,7 +82,7 @@ main {
 form {
     background: #fff;
     border: solid 1px #4B4B4B;
-    width: 462px;
+    width: 80%;
     height: 38px;
     display: flex;
     border-radius: 10px;
