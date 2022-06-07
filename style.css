@@ -6,6 +6,7 @@
 
     body{
         background-color: #1a1a1a;
+        margin: 0 auto;
     }
 
 
@@ -54,11 +55,6 @@
     align-items: center;
     justify-content: center;
 }
-
-img {
-    margin-bottom: 10px;
-}
-
 
 header {
     min-width: 100%;
@@ -115,3 +111,63 @@ form button:hover {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
+    max-width: 80%;
+    border-bottom: rgb(150, 147, 147) 1px solid;
+    display: flex;
+}
+
+
+.title {
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+}
+
+.rating {
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.star {
+    margin: 0px;
+}
+ 
+.movie__info {
+    display: flex;
+}
+
+.watchlist__icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}
