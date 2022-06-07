@@ -26,17 +26,19 @@ fetch(`http://www.omdbapi.com/?t=${searchInput}?&apikey=d45d22f1`)
 
 function renderMovies(movieDB) {
 
+    console.log(movieDB)
+
     let renderCard = `<div class="card">
     <div><img class="movie__poster" src= ${movieDB.Poster} alt=""></div>
     <div>
-    <div class="title">${movieDB.Title}<span class="star"> ⭐ </span> <span class="rating">${movieDB.Ratings[0]}</span></div>
+    <div class="title">${movieDB.Title}<span class="star"> ⭐ </span> <span class="rating">${movieDB.Ratings[0].Value}</span></div>
     <div class="movie__info"><span>${movieDB.Runtime}</span><span>${movieDB.Genre}</span><div><span class="watchlist__icon"><img class="plusicon" src="plusicon.png" alt="">  Watchlist</span></div></div>
     <div class="movie__description">${movieDB.Plot}</div>
     </div>
     </div>
     `
 
-    cardList.innerHTML = renderCard + renderCard + renderCard + renderCard
+    cardList.innerHTML = renderCard 
 
 
 }
