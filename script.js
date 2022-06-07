@@ -27,6 +27,42 @@ cardList.innerHTML = `<div class="card">
 </div>
 </div>
 
+<div class="card">
+<div><img src="bladerunner.png" alt=""></div>
+<div>
+<div class="title">Blade Runner <span class="star"> ⭐ </span> <span class="rating">8.1</span></div>
+<div class="movie__info"><span>117 min</span><span>Action, Drama, Sci-fi</span><div><span class="watchlist__icon"><img class="plusicon" src="plusicon.png" alt="">  Watchlist</span></div></div>
+<div class="movie__description">A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.</div>
+</div>
+</div>
+
+<div class="card">
+<div><img src="bladerunner.png" alt=""></div>
+<div>
+<div class="title">Blade Runner <span class="star"> ⭐ </span> <span class="rating">8.1</span></div>
+<div class="movie__info"><span>117 min</span><span>Action, Drama, Sci-fi</span><div><span class="watchlist__icon"><img class="plusicon" src="plusicon.png" alt="">  Watchlist</span></div></div>
+<div class="movie__description">A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.</div>
+</div>
+</div>
+
+<div class="card">
+<div><img src="bladerunner.png" alt=""></div>
+<div>
+<div class="title">Blade Runner <span class="star"> ⭐ </span> <span class="rating">8.1</span></div>
+<div class="movie__info"><span>117 min</span><span>Action, Drama, Sci-fi</span><div><span class="watchlist__icon"><img class="plusicon" src="plusicon.png" alt="">  Watchlist</span></div></div>
+<div class="movie__description">A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.</div>
+</div>
+</div>
+
+<div class="card">
+<div><img src="bladerunner.png" alt=""></div>
+<div>
+<div class="title">Blade Runner <span class="star"> ⭐ </span> <span class="rating">8.1</span></div>
+<div class="movie__info"><span>117 min</span><span>Action, Drama, Sci-fi</span><div><span class="watchlist__icon"><img class="plusicon" src="plusicon.png" alt="">  Watchlist</span></div></div>
+<div class="movie__description">A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.</div>
+</div>
+</div>
+
 `
 
 
