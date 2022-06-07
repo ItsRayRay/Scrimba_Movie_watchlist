@@ -18,65 +18,28 @@ let searchInput = document.querySelector("input").value
 
 cardList.innerHTML = ""
 
-cardList.innerHTML = `<div class="card">
-<div><img src="bladerunner.png" alt=""></div>
-<div>
-<div class="title">Blade Runner <span class="star"> ⭐ </span> <span class="rating">8.1</span></div>
-<div class="movie__info"><span>117 min</span><span>Action, Drama, Sci-fi</span><div><span class="watchlist__icon"><img class="plusicon" src="plusicon.png" alt="">  Watchlist</span></div></div>
-<div class="movie__description">A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.</div>
-</div>
-</div>
-
-<div class="card">
-<div><img src="bladerunner.png" alt=""></div>
-<div>
-<div class="title">Blade Runner <span class="star"> ⭐ </span> <span class="rating">8.1</span></div>
-<div class="movie__info"><span>117 min</span><span>Action, Drama, Sci-fi</span><div><span class="watchlist__icon"><img class="plusicon" src="plusicon.png" alt="">  Watchlist</span></div></div>
-<div class="movie__description">A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.</div>
-</div>
-</div>
-
-<div class="card">
-<div><img src="bladerunner.png" alt=""></div>
-<div>
-<div class="title">Blade Runner <span class="star"> ⭐ </span> <span class="rating">8.1</span></div>
-<div class="movie__info"><span>117 min</span><span>Action, Drama, Sci-fi</span><div><span class="watchlist__icon"><img class="plusicon" src="plusicon.png" alt="">  Watchlist</span></div></div>
-<div class="movie__description">A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.</div>
-</div>
-</div>
-
-<div class="card">
-<div><img src="bladerunner.png" alt=""></div>
-<div>
-<div class="title">Blade Runner <span class="star"> ⭐ </span> <span class="rating">8.1</span></div>
-<div class="movie__info"><span>117 min</span><span>Action, Drama, Sci-fi</span><div><span class="watchlist__icon"><img class="plusicon" src="plusicon.png" alt="">  Watchlist</span></div></div>
-<div class="movie__description">A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.</div>
-</div>
-</div>
-
-<div class="card">
-<div><img src="bladerunner.png" alt=""></div>
-<div>
-<div class="title">Blade Runner <span class="star"> ⭐ </span> <span class="rating">8.1</span></div>
-<div class="movie__info"><span>117 min</span><span>Action, Drama, Sci-fi</span><div><span class="watchlist__icon"><img class="plusicon" src="plusicon.png" alt="">  Watchlist</span></div></div>
-<div class="movie__description">A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.</div>
-</div>
-</div>
-
-`
-
-
-
-
-
-
-
-
 
 fetch(`http://www.omdbapi.com/?t=${searchInput}?&apikey=d45d22f1`)
 .then(response => response.json())
-.then(data => { console.log(data) } )
+.then( movieDB => renderMovies(movieDB))
 
+
+function renderMovies(movieDB) {
+
+    let renderCard = `<div class="card">
+    <div><img class="movie__poster" src= ${movieDB.Poster} alt=""></div>
+    <div>
+    <div class="title">${movieDB.Title}<span class="star"> ⭐ </span> <span class="rating">${movieDB.Ratings[0]}</span></div>
+    <div class="movie__info"><span>${movieDB.Runtime}</span><span>${movieDB.Genre}</span><div><span class="watchlist__icon"><img class="plusicon" src="plusicon.png" alt="">  Watchlist</span></div></div>
+    <div class="movie__description">${movieDB.Plot}</div>
+    </div>
+    </div>
+    `
+
+    cardList.innerHTML = renderCard + renderCard + renderCard + renderCard
+
+
+}
 
 
 
