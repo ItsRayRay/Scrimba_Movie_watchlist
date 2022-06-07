@@ -22,18 +22,12 @@ fetch(`http://www.omdbapi.com/?s=${searchInput}?&apikey=d45d22f1`)
 .then(response => response.json())
 .then( movieDB => renderMovies(movieDB))
 
+let movieID = []
+
 
 function renderMovies(movieDB) {
 
-
-    console.log(movieDB.Search)
-
-    
-
     for (let i = 0; i < movieDB.Search.length; i++) {
-
-
-
     let renderCard = `<div class="card">
     <div><img class="movie__poster" src= ${movieDB.Search[i].Poster} alt=""></div>
     <div>
@@ -44,12 +38,11 @@ function renderMovies(movieDB) {
     </div>
     `
     cardList.innerHTML += renderCard
-
-
+  movieID +=  movieDB.Search[i].imdbID
 
     }
 
-
+console.log(movieID)
 
 }
 
