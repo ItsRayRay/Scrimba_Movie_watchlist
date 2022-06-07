@@ -2,7 +2,7 @@
 const searchButton = document.querySelector("#search__btn")
 const watchListButton = document.querySelector("#watchlist__btn")
 const cardList = document.querySelector("main")
-
+let movieID = []    
 
 cardList.innerHTML = `<main style ="display:flex" ><div id="center__page">
 <img src="Icon.movie.png" alt="">
@@ -10,22 +10,22 @@ cardList.innerHTML = `<main style ="display:flex" ><div id="center__page">
 </div></main>
 `
 
-searchButton.addEventListener("click", function(e) { 
+searchButton.addEventListener("click", function(e) {  //search button
 e.preventDefault()
 
-let searchInput = document.querySelector("input").value
+let searchInput = document.querySelector("input").value  // get the value of the input
 
-cardList.innerHTML = ""
+cardList.innerHTML = ""         // clears the cardList
 
 
-fetch(`http://www.omdbapi.com/?s=${searchInput}?&apikey=d45d22f1`)
+fetch(`http://www.omdbapi.com/?s=${searchInput}?&apikey=d45d22f1`)      // fetching the data from the API
 .then(response => response.json())
 .then( movieDB => renderMovies(movieDB))
 
-let movieID = []
-
+                                                    // array to store the movie ID
 
 function renderMovies(movieDB) {
+
 
     for (let i = 0; i < movieDB.Search.length; i++) {
     let renderCard = `<div class="card">
@@ -37,12 +37,19 @@ function renderMovies(movieDB) {
     </div>
     </div>
     `
+
     cardList.innerHTML += renderCard
-  movieID +=  movieDB.Search[i].imdbID
+
+  movieIDVar =  movieDB.Search[i].imdbID   // this is the imdbID of the movie looping
+    movieID.push(movieIDVar)                // now this one pushes it on to the array
 
     }
 
-console.log(movieID)
+
+  console.log(movieID[2])
+
+
+
 
 }
 
