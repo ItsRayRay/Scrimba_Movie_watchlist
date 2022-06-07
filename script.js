@@ -1,16 +1,23 @@
 const searchButton = document.querySelector("#search__btn")
 const watchListButton = document.querySelector("#watchlist__btn")
-let searchInput = document.querySelector("#search__input")
-
+const cardList = document.querySelector("main")
 
 
 searchButton.addEventListener("click", function(e) { 
-    e.preventDefault()
-    let searchValue = searchInput.value
+e.preventDefault()
 
-fetch(`http://www.omdbapi.com/?t=${searchValue}?&apikey=d45d22f1`)
+let searchInput = document.querySelector("input").value
+
+fetch(`http://www.omdbapi.com/?t=${searchInput}?&apikey=d45d22f1`)
 .then(response => response.json())
 .then(data => { console.log(data) } )
+
+
+
+
+
+
+
 
 
 })
