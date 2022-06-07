@@ -16,8 +16,4 @@ fetch(`http://www.omdbapi.com/?t=${searchInput}?&apikey=d45d22f1`)
 
 
 
-
-
-
-
 })
