@@ -12,8 +12,6 @@ cardList.innerHTML = `<main style ="display:flex" ><div id="center__page">
 
 
 
-
-
 searchButton.addEventListener("click", function(e) {  //search button
    e.preventDefault()
 
@@ -41,17 +39,15 @@ for (let i = 0; i < movielistID.length; i++) {    // the array loops trough the 
  <div><img class="movie__poster" src="${firstMovieDataJson.Poster} " alt=""></div>
  <div>
  <div class="title"> ${firstMovieDataJson.Title} <span class="star"> ⭐ </span> <span class="rating">${firstMovieDataJson.Ratings[0].Value} </span></div>
- <div class="movie__info"><span>${firstMovieDataJson.Runtime} </span><span>${firstMovieDataJson.Genre} </span><div><span class="watchlist__icon"><img class="plusicon" src="plusicon.png" alt="">  Watchlist</span></div></div>
+ <div class="movie__info"><span>${firstMovieDataJson.Runtime} </span><span>${firstMovieDataJson.Genre} </span><div><span class="watchlist__icon"><img onclick="saveMovie(${i})"  class="plusicon" src="plusicon.png" alt="">  Watchlist</span></div></div>
  <div class="movie__description">${firstMovieDataJson.Plot} </div>
  </div>
  </div>
  `
 }
 
+
 }
-
-
-
 
 
 getMovies() 
@@ -59,3 +55,9 @@ getMovies()
 
 })
 
+
+function saveMovie(pass) {
+   
+   console.log(pass)
+
+}
