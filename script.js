@@ -74,7 +74,6 @@ function saveMovie(pass) {
  let savedMoviesSerialized= JSON.stringify( savedMovies[pass] )
  localStorage.setItem (pass, savedMoviesSerialized )
 
- console.log(localStorage[3])
 
 }
 
