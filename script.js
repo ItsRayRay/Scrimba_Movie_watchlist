@@ -2,7 +2,7 @@
 const searchButton = document.querySelector("#search__btn")
 const watchListButton = document.querySelector("#watchlist__btn")
 const cardList = document.querySelector("main")  
-
+let movielistFull = []
 
 
 cardList.innerHTML = `<main style ="display:flex" ><div id="center__page">
@@ -31,24 +31,21 @@ const movielistID = movieList.map(movie => movie.imdbID) // map trough the array
 
 
 for (let i = 0; i < movielistID.length; i++) {    // the array loops trough the lenght of all the imdbID and put it in the fetch as a parameter to get the movie data
-
  const firstMovieData = await fetch(`https://www.omdbapi.com/?i=${movielistID[i]}&apikey=d45d22f1`)
  const firstMovieDataJson = await firstMovieData.json()
 
 
  cardList.innerHTML += `<div class="card">
- <div><img src="bladerunner.png" alt=""></div>
+ <div><img class="movie__poster" src="${firstMovieDataJson.Poster} " alt=""></div>
  <div>
- <div class="title">Blade Runner <span class="star"> ⭐ </span> <span class="rating">8.1</span></div>
- <div class="movie__info"><span>117 min</span><span>Action, Drama, Sci-fi</span><div><span class="watchlist__icon"><img class="plusicon" src="plusicon.png" alt="">  Watchlist</span></div></div>
- <div class="movie__description">A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.</div>
+ <div class="title"> ${firstMovieDataJson.Title} <span class="star"> ⭐ </span> <span class="rating">${firstMovieDataJson.Ratings[0].Value} </span></div>
+ <div class="movie__info"><span>${firstMovieDataJson.Runtime} </span><span>${firstMovieDataJson.Genre} </span><div><span class="watchlist__icon"><img class="plusicon" src="plusicon.png" alt="">  Watchlist</span></div></div>
+ <div class="movie__description">${firstMovieDataJson.Plot} </div>
  </div>
  </div>
  `
-
-console.log(firstMovieDataJson)
-
 }
+
 
 
 }
