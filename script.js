@@ -2,14 +2,16 @@
 const searchButton = document.querySelector("#search__btn")
 const watchListButton = document.querySelector("#watchlist__btn")
 const cardList = document.querySelector("main")  
-let movielistFull = []
+const addToWatchlist = document.querySelector(".watchlist__icon")
 
 
 cardList.innerHTML = `<main style ="display:flex" ><div id="center__page">
 <img src="Icon.movie.png" alt="">
 <div><h4>Start exploring</h4></div>
-</div></main>
-`
+</div></main>`
+
+
+
 
 
 searchButton.addEventListener("click", function(e) {  //search button
@@ -46,12 +48,14 @@ for (let i = 0; i < movielistID.length; i++) {    // the array loops trough the 
  `
 }
 
-
-
 }
+
+
+
+
 
 getMovies() 
 .catch(err => console.log(err))
 
-
 })
+

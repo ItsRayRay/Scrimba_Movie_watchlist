@@ -38,6 +38,25 @@
         
     }
 
+    #watchlist__btn:hover {
+        color: #8b8b8b;
+        cursor: pointer;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 1.2em;
+        border-bottom: none;
+    }
+    
+    
+    #watchlist__btn {
+        cursor: pointer;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 1.2em;
+        border-bottom: none;
+    }
+
 .container {
     max-width: 550px;
     max-height: 779px;
