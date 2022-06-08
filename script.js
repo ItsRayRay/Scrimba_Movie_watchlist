@@ -47,12 +47,12 @@ for (let i = 0; i < movielistID.length; i++) {    // the array loops trough the 
  `
 
    savedMovieObj = { 
-                      title: firstMovieDataJson.Title,
+                     title: firstMovieDataJson.Title,
                      poster: firstMovieDataJson.Poster,
                      rating: firstMovieDataJson.Ratings[0].Value,
-                       runtime: firstMovieDataJson.Runtime,
-                        genre: firstMovieDataJson.Genre,
-                       plot: firstMovieDataJson.Plot,
+                     runtime: firstMovieDataJson.Runtime,
+                     genre: firstMovieDataJson.Genre,
+                     plot: firstMovieDataJson.Plot,
 
                     }
 
@@ -62,7 +62,6 @@ for (let i = 0; i < movielistID.length; i++) {    // the array loops trough the 
 
 }
 
-
 getMovies() 
 .catch(err => console.log(err))
 
@@ -70,8 +69,15 @@ getMovies()
 
 
 
-function saveMovie(pass, ) {
+function saveMovie(pass) {
    
-   console.log(pass)
+ let savedMoviesSerialized= JSON.stringify( savedMovies[pass] )
+ localStorage.setItem (pass, savedMoviesSerialized )
 
+ console.log(localStorage)
+
+ let savedMoviesDeserialized = JSON.parse(localStorage.getItem(pass))
+ 
+
+   console.log(savedMoviesDeserialized)
 }
