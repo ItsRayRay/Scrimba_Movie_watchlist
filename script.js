@@ -76,8 +76,5 @@ function saveMovie(pass) {
 
  console.log(localStorage)
 
- let savedMoviesDeserialized = JSON.parse(localStorage.getItem(pass))
- 
-
-   console.log(savedMoviesDeserialized)
 }
+
