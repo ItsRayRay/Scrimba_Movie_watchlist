@@ -13,7 +13,7 @@
         color: white;
         font-family: 'Roboto', sans-serif;
         font-weight: 900;
-        font-size: 2.6em;
+        font-size: 2.4em;
     }
 
     h3 {
@@ -37,25 +37,39 @@
     margin-top: 50px;
 }
 
-
-#watchlist__btn:hover {
-    color: #8b8b8b;
-    cursor: pointer;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 1.2em;
-    text-decoration: none;
-}
-
-
 #watchlist__btn {
-    cursor: pointer;
+    background-color: #1a1a1a;
     color: white;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 1.2em;
-    border-bottom: none;
-    text-decoration: none;
+    cursor: pointer;
+}
+
+#watchlist__btn:hover {
+    background-color: #DFDDDD;
+    color: #1a1a1a;
+}
+
+
+.addToWatchlistBtn {
+    background-color: #1a1a1a;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.addToWatchlistBtn:hover {
+    background-color: #DFDDDD;
+    color: #1a1a1a;
+    font-size: larger;
 }
 
 #center__page {
@@ -76,12 +90,31 @@ header {
     background-image: url("image-36.png")
 }
 
+@media(max-width:500px){
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+
+    .movie__poster {
+        width: 75px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-image: url("image-36.png")
+      }  
+    }
+
+
+
 main {
     min-width: 100%;
     min-height: 571px;
     background-color: #ffffff;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+
 }
 
 
@@ -105,7 +138,7 @@ form input {
 
 form button {
     background: #4B4B4B;
-    padding: 10px 40px;
+    padding: 10px 10px;
     border: solid #4B4B4B 1px;
     OUTLINE: none;
     color: #fff;
@@ -133,6 +166,9 @@ form button:hover {
     border-bottom: rgb(150, 147, 147) 1px solid;
     display: flex;
     padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -204,19 +240,12 @@ span {
     max-width: 140px;
 }
 
-@media(max-width:500px){
-    header {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        
-    }
 
-    .movie__poster {
-        width: 75px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        background-image: url("image-36.png")
-      }  
-    }
-
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+  
+}

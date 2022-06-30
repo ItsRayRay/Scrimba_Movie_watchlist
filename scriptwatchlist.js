@@ -42,7 +42,14 @@ for (let i = 0; i < items.length; i++) {
  
     const addToWatchlistBtn = document.createElement("button");
     addToWatchlistBtn.textContent = "Remove From Watchlist";
+    addToWatchlistBtn.value = items[i].uniqueID;
     addToWatchlistBtn.classList.add("addToWatchlistBtn");
+    addToWatchlistBtn.addEventListener("click", function () {
+        // remove from watchlist button (local storage)
+        localStorage.removeItem(this.value);
+        location.reload();
+   
+    })
 
    
     const movieDescription = document.createElement("div");
@@ -64,3 +71,4 @@ for (let i = 0; i < items.length; i++) {
  
 
 }
+
