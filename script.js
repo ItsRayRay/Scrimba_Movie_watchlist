@@ -36,7 +36,6 @@ searchButton.addEventListener("click", function (e) {
       let uniqueID = Date.now() // random number to make the movie object unique
 
 
-   
    const card = document.createElement("div");
    card.classList.add("card");
    const div = document.createElement("div");
@@ -61,8 +60,6 @@ searchButton.addEventListener("click", function (e) {
    const spanGenre = document.createElement("span");
    spanGenre.classList.add("genre");
    spanGenre.innerHTML = firstMovieDataJson.Genre;
-   const spanWatchlistIcon = document.createElement("span");
-   spanWatchlistIcon.classList.add("watchlist__icon");
 
 
    const addToWatchlistBtn = document.createElement("button");
