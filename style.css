@@ -38,25 +38,19 @@
 }
 
 
-#watchlist__btn:hover {
-    color: #8b8b8b;
-    cursor: pointer;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 1.2em;
-    text-decoration: none;
-}
 
-
-#watchlist__btn {
-    cursor: pointer;
+.addToWatchlistBtn {
+    background-color: #1a1a1a;
     color: white;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 1.2em;
-    border-bottom: none;
-    -moz-outline-style: none;
-    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 
 #center__page {
@@ -101,6 +95,7 @@ main {
     background-color: #ffffff;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+
 }
 
 
@@ -152,6 +147,9 @@ form button:hover {
     border-bottom: rgb(150, 147, 147) 1px solid;
     display: flex;
     padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -221,4 +219,14 @@ span {
 
 .movie__poster{
     max-width: 140px;
+}
+
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+  
 }
