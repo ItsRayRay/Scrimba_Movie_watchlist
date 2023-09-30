@@ -4,4 +4,4 @@ The project was an opportunity for me to build on my API and local storage skill
 
 The movie watchlist interface is designed to be user-friendly and intuitive, with a search bar for finding movies and a display area for showing movie details. Users can add movies to their watchlist.
 
-Overall, this project helped me to further develop my skills in API calls and local storage management. Feel free to check out the movie watchlist and give it a try! Here is the link: https://itsrayray.github.io/Scrimba_Movie_watchlist/
+Overall, this project helped me to further develop my skills in API calls and local storage management. 
